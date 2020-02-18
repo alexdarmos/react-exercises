@@ -1,12 +1,77 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+function MyThing() {
+    return (
+        <div className='book'>
+            <div className='title'>
+                The Title
+            </div>
+            <div className="Author">
+                The Author
+            </div>
+            <ul className='stats'>
+                <li className='rating'>
+                    5 Stars
+                </li>
+                <li className='isbn'>
+                    12-345678910
+                </li>
+            </ul>
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+            <div>
+                Newline
+                Test
+            </div>
+
+            <div>
+                Empty
+
+                Newlines
+
+                Here
+            </div>
+
+            <div>
+                &nbsp;Non-breaking
+                &nbsp;Spaces&nbsp;
+            </div>
+
+            <div>
+                Line1
+                {' '}
+                Line2
+            </div>
+
+        </div>
+    )
+}
+
+
+function Greetings() {
+    let username = undefined;
+
+   return (
+       React.createElement('div', {}, !username ? 'Not Logged In' :'Hello ' + username)
+   )
+
+}
+
+function Test() {
+    let x = undefined;
+
+   return (
+    <div>
+        "hello"
+    </div>
+    )
+
+}
+
+//Finish exericse 6. pg-39
+
+
+ReactDOM.render(
+    <Test/>,
+    document.querySelector('#root')
+);
